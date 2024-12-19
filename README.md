@@ -23,6 +23,14 @@ Considere as funções e objetivos principais de um sistema operacional conforme
 
 **Copilot informa**: Essa questão incentiva os alunos a explorarem os conceitos fundamentais e a aplicarem o conhecimento teórico em situações práticas. Se precisar de mais alguma coisa, estou aqui para ajudar!
 
+### Resposta:
+Um SO é um software que atua como intermediário entre o hardware de um computador e os programas em execução., e tem como objetivo gerenciar os recursos de hardware e software de forma eficiente e segura, proporcionando uma experiência estável e funcional para o usuário.
+
+- Gerenciamento de processos: envolve a criação, execução e terminação de processos, além da alocação de recursos como tempo de CPU, além de utilizar um escalonador para determinar quais processos terão acesso ao processador e por quanto tempo. Ele também isola os processos para evitar interferência mútua e monitora seu estado (pronto, em execução, suspenso). EX: Ouvir musica e navegar na internet, o SO garante que ambos os processos atuem sem prejudicar o desempenho geral.
+- Gerenciamento de memória: assegura que a memória RAM seja utilizada de forma eficiente e que cada processo tenha acesso seguro à sua área de memória, divide a memória em partes e aloca espaços para os processos conforme necessário. EX: abrir várias abas no navegador, o SO aloca memória para cada aba, isolando-as para evitar que uma falha em uma aba afete as outras.
+- Gerenciamento de dispositivos de entrada e saída: gerencia o acesso aos dispositivos de hardware, como teclado, mouse, impressoras e discos rígidos, garantindo comunicação eficiente e evitando conflitos. Ele utiliza drivers específicos para cada dispositivo e uma fila de solicitações para gerenciar múltiplos acessos. EX: copiar um arquivo para um pendrive, o SO controla a transferência dos dados, evitando que outro programa interfira no processo.
+- Gerenciamento de arquivos: organiza e controla o acesso aos dados armazenados no disco rígido ou outros meios de armazenamento. Usa sistemas de arquivos, como NTFS ou EXT4, para estruturar os dados em diretórios e arquivos, além de gerenciar permissões de acesso para garantir segurança. EX: ao salvar um documento em uma pasta específica, o SO registra a localização e mantém as permissões para que somente usuários autorizados possam acessá-lo.
+
 # Questão 2. Estrutura de sistemas operacionais
 
 ## Texto informativo
@@ -70,6 +78,13 @@ Com base no texto sobre a estrutura de sistemas operacionais, analise como as di
 
 **Copilot informa**: Essa questão incentiva os alunos a considerarem tanto os aspectos econômicos quanto os de segurança ao avaliar diferentes arquiteturas de sistemas operacionais.
 
+### Resposta:
+Enquanto arquiteturas monolíticas são rápidas e baratas de desenvolver, elas apresentam desafios em segurança e manutenção. Arquiteturas microkernel e em camadas oferecem maior modularidade e segurança, mas exigem maior especialização e investimento inicial. A escolha ideal dependerá do contexto de uso e das prioridades, como custo, segurança ou facilidade de manutenção. Enquanto a Monolítica se mostra a mais "simples" inicialmente, ela requer um custo de manutenção alto, principalmente devido à sua vulnerabilidade em questões de segurança. Já a Microkernel, por precisar de um núcleo e da separação de processos, tem um custo inicial alto, mas, devido à alta segurança, sua manutenção acaba sendo menos custosa. Já a em Camadas, parece ter um equilíbrio maior, tendo uma segurança por camada, que pode acabar por apresentar algum problema na comunicação entre as camadas, mas também requer um bom investimento inicial, com manutenção mais simples, já que é feita camada a camada.
+EXEMPLOS:
+- Monolítica: Linux.
+- Microkernel: Minix.
+- Camadas: Windows.
+
 # Questão 3. Introdução à Segurança de Sistemas Operacionais
 
 ## Texto informativo
@@ -98,6 +113,19 @@ Considerando os mecanismos de segurança discutidos, analise como a implementaç
 
 **Copilot informa**: Essa questão incentiva os alunos a refletirem sobre o equilíbrio entre segurança, performance e usabilidade, aplicando conceitos teóricos a contextos práticos.
 
+### Resposta
+O controle de acesso e a criptografia são essenciais para a segurança de sistemas operacionais, mas podem impactar a performance e a usabilidade.  
+
+- **Controle de Acesso:**  
+  Beneficia a segurança ao limitar acessos não autorizados, mas pode frustrar usuários com autenticações frequentes ou rígidas. Bem implementado (como biometria), é quase imperceptível, mas, se mal otimizada, pode causar atrasos, especialmente em sistemas com grande volume de dados ou dispositivos com hardware antigo.
+- **Criptografia:**  
+  Protege dados, mas pode consumir muitos recursos em tempo real, especialmente em dispositivos menos potentes. Configurações bem ajustadas tornam seu impacto na usabilidade mínimo.  
+
+Em situações críticas:
+- Ambientes corporativos:
+Controle de acesso e criptografia são indispensáveis para proteger informações confidenciais e atender a regulamentações (como GDPR).
+- Serviços online:
+Controle de acesso e criptografia (ex.: HTTPS e senhas protegidas) são essenciais para proteger dados de usuários em plataformas como redes sociais ou bancos.
 
 # Questão 4. Custo de Processamento versus Algoritmo Ótimo de Escalonamento
 
@@ -129,6 +157,30 @@ Considerando os conceitos de custo de processamento e algoritmo ótimo de escalo
 
 **Copilot informa**: Essa questão incentiva os alunos a refletirem sobre a complexidade e os trade-offs envolvidos na escolha de um algoritmo de escalonamento, aplicando conceitos teóricos a contextos práticos.
 
+### Resposta
+
+**First-Come, First-Served (FCFS)**
+
+Vantagens:
+- Fácil de implementar e com baixo custo de processamento. Funciona bem em sistemas onde a ordem de chegada é importante, como filas de impressão.
+
+Desvantagens:
+- Pode levar ao convoy effect, onde processos pequenos ficam esperando processos maiores terminarem. Resulta em tempos de espera altos para processos curtos.
+
+Uso: Fila de impressão ou sistemas de processamento simples.
+
+
+**Shortest Job Next (SJN)**
+
+Vantagens:
+- Minimiza o tempo médio de espera, pois prioriza processos mais curtos.
+Maximiza a eficiência do processador em sistemas de processamento em lote.
+
+Desvantagens:
+- Requer conhecimento prévio do tempo de execução dos processos, o que pode não ser viável. Pode levar à inanição de processos longos, que ficam constantemente preteridos.
+
+Uso: Servidores de processamento em lote.
+
 # Questão 5. Aplicativo em python vs aplicativos em c
 
 ## Questão
@@ -142,3 +194,45 @@ Explique o caminho que as instruções seguem desde um aplicativo escrito em Pyt
 **Dica:** Compare e contraste os dois processos, destacando as principais diferenças e semelhanças na forma como as instruções são processadas e executadas.
 
 **Copilot informa**: Essa questão incentiva os alunos a refletirem sobre os diferentes caminhos que as instruções seguem em linguagens interpretadas e compiladas, aplicando conceitos teóricos a contextos práticos.
+
+### Resposta:
+
+**1. Aplicativo em Python**  
+  O Python é uma linguagem interpretada. Isso significa que as instruções do código-fonte são lidas e executadas linha a linha por um interpretador, como o CPython.
+- Caminho das Instruções: 
+  1. O código Python é convertido em **bytecode** pelo interpretador, que é uma representação intermediária mais próxima do código de máquina.  
+  2. Esse bytecode é executado por uma **máquina virtual** (Python Virtual Machine - PVM).  
+  3. Durante a execução, o interpretador interage com o **kernel** do sistema operacional para solicitar recursos, como memória, processamento e entrada/saída.  
+  4. As instruções finais são traduzidas em código binário pelo kernel e pelos drivers, sendo enviadas ao hardware.  
+- Impacto:  
+  O uso de um interpretador torna o Python mais lento em execução comparado ao C, pois as instruções são processadas em tempo real.
+
+**2. Aplicativo em C**  
+  O C é uma linguagem compilada, ou seja, o código-fonte é traduzido previamente em **código de máquina** por um compilador, como o **GCC**.
+- Caminho das Instruções: 
+  1. O código é transformado em código de máquina (binário executável) durante a compilação, antes da execução.  
+  2. Quando executado, o binário interage diretamente com o **kernel** do sistema operacional, que gerencia os recursos do sistema.  
+  3. O kernel solicita a ajuda dos **drivers de dispositivo** para traduzir as instruções de alto nível em comandos que o hardware pode entender.  
+  4. Essas instruções chegam ao processador já no formato binário (0s e 1s).  
+- Impacto: 
+  Por já estar em código de máquina, aplicativos em C têm execução mais rápida e eficiente, mas requerem um passo extra de compilação.
+
+**3. Interação com o Kernel e Drivers**
+- Em ambos os casos, o kernel do sistema operacional é responsável por:
+  - Gerenciar os recursos do sistema, como memória e CPU.
+  - Solicitar aos drivers de dispositivo que traduzam as instruções para comandos de hardware específicos.
+- A diferença está na forma como o código chega ao kernel:  
+  - Em Python, via interpretador e máquina virtual.  
+  - Em C, diretamente como código de máquina já compilado.
+
+**4. Semelhanças e Diferenças**
+- Semelhanças:  
+  - Ambos interagem com o kernel e os drivers para acessar recursos de hardware.  
+  - Ambos precisam traduzir suas instruções em binário para serem compreendidos pelo hardware.  
+- Diferenças:
+  - Python usa um interpretador, enquanto C usa um compilador.  
+  - Python requer mais etapas em tempo de execução (interpretação, bytecode, execução pela PVM).  
+  - C gera código de máquina direto, resultando em maior eficiência.
+
+
+A principal diferença entre Python e C está no momento em que ocorre a tradução do código para binário. Python é interpretado em tempo de execução, o que o torna mais flexível, mas menos eficiente. Já o C é compilado previamente, o que resulta em maior velocidade e eficiência no uso de recursos, sendo ideal para sistemas de baixo nível ou aplicações críticas em desempenho.
