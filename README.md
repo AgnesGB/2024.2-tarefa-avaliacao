@@ -3,8 +3,9 @@
 ## Informações gerais
 - **Objetivo do repositório**: Avaliação do 1o bimestre da Disciplina de sistemas operacionais do curso de TADS do IFRN-CNAT
 - **Público alvo**: alunos da disciplina de SO (Sistemas Operacionais) do curso de TADS (Superior em Tecnologia em Análise e Desenvolvimento de Sistemas) no CNAT-IFRN (Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte - Campus Natal-Central).
-- disciplina: **SO** Sistemas Operacionais
-- professor: [Leonardo A. Minora](https://github.com/leonardo-minora)
+- Disciplina: **SO** Sistemas Operacionais
+- Professor: [Leonardo A. Minora](https://github.com/leonardo-minora)
+- Aluno: [Agnes Gonçalves Barbosa](https://github.com/AgnesGB)
 
 ## Avaliação
 - **Lembre de fazer o fork deste repositório**
